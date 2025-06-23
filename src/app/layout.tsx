@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="ms" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.png" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
