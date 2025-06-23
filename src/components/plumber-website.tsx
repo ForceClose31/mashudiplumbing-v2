@@ -656,6 +656,35 @@ export default function PlumbingWebsite() {
         </div>
       </section>
 
+      {/* Badge Section */}
+      <section className="bg-white py-12 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+            <div className="flex items-center gap-4">
+              <img
+                src="/images/badges/quality-badge.png"
+                alt="Google 5-Star Rating"
+                className="w-auto h-24"
+              />
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img
+                src="/images/badges/service-badge.png"
+                alt="Certified Plumber"
+                className="w-auto h-24"
+              />
+            </div>
+          </div>
+          <div className="mt-5">
+            <p className="text-xl font-bold text-gray-800">
+              Tukang Paip Bertauliah
+            </p>
+            <p className="text-sm text-gray-600">Berdaftar & Profesional</p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
