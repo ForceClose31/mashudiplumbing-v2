@@ -36,14 +36,17 @@ export default function PlumbingWebsite() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
+      <section
+        className="relative text-white py-20 px-4 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/hero/plumber-hero-2.jpg')" }} // Ganti sesuai path gambar
+      >
+        <div className="absolute inset-0 bg-black/70"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/3">
               <div className="relative">
                 <img
-                  src="/placeholder.svg?height=500&width=400"
+                  src="/images/hero/plumber-hero.jpg"
                   alt="Professional Plumber"
                   className="rounded-2xl shadow-2xl w-full max-w-sm mx-auto"
                 />
@@ -178,19 +181,19 @@ export default function PlumbingWebsite() {
               {
                 title: "TILES / JUBIN TANDAS",
                 desc: "Melakukan kerja-kerja pemasangan tiles / jubin serta mozac tandas. Rekabentuk kami moden dan memenuhi citarasa anda.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/images/services/tiles-service.jpg",
                 icon: "🏠",
               },
               {
                 title: "SINKI TERSUMBAT",
                 desc: "Kami sedia membaiki pulih sinki atau saluran yang tersumbat di rumah anda, supaya air dapat mengalir seperti biasa.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/images/services/sink-repair.jpg",
                 icon: "🚿",
               },
               {
                 title: "PAIP BOCOR",
                 desc: "Membaiki dan mengenal pasti masalah paip bocor. Seperti paip sinki, paip bilik air, paip meter dan sebagainya.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/images/services/pipe-repair.jpg",
                 icon: "🔧",
               },
             ].map((service, index) => (
@@ -245,7 +248,7 @@ export default function PlumbingWebsite() {
             <div className="lg:w-1/2">
               <div className="relative">
                 <img
-                  src="/placeholder.svg?height=600&width=500"
+                  src="/images/about/team-service.jpg"
                   alt="Our Service"
                   className="rounded-2xl shadow-2xl w-full"
                 />
@@ -440,19 +443,53 @@ export default function PlumbingWebsite() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
+            {[
+              {
+                type: "image",
+                src: "/images/gallery/work1.jpg",
+                alt: "Kerja Tiles",
+              },
+              {
+                type: "video",
+                src: "/images/gallery/videos/demo1.mp4",
+                alt: "Kerja Paip",
+              },
+              {
+                type: "image",
+                src: "/images/gallery/work2.jpg",
+                alt: "Kerja Paip",
+              },
+              {
+                type: "video",
+                src: "/images/gallery/videos/demo2.mp4",
+                alt: "Kerja Sinki",
+              },
+              {
+                type: "video",
+                src: "/images/gallery/videos/demo4.mp4",
+                alt: "Kerja Sinki",
+              },
+              {
+                type: "video",
+                src: "/images/gallery/videos/demo3.mp4",
+                alt: "Kerja Renovation",
+              },
+            ].map((item, index) => (
               <Card
-                key={item}
+                key={index}
                 className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
               >
-                {item % 2 === 0 ? (
+                {item.type === "video" ? (
                   <div className="relative">
                     <video
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                       controls
-                      poster="/placeholder.svg?height=256&width=400"
+                      onError={(e) => {
+                        e.currentTarget.poster =
+                          "/placeholder.svg?height=256&width=400";
+                      }}
                     >
-                      <source src="#" type="video/mp4" />
+                      <source src={item.src} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
@@ -462,9 +499,13 @@ export default function PlumbingWebsite() {
                 ) : (
                   <div className="relative overflow-hidden">
                     <img
-                      src={`/placeholder.svg?height=256&width=400`}
-                      alt={`Gallery ${item}`}
+                      src={item.src || "/placeholder.svg"}
+                      alt={item.alt}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.src =
+                          "/placeholder.svg?height=256&width=400";
+                      }}
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                   </div>
@@ -552,17 +593,17 @@ export default function PlumbingWebsite() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
               <Phone className="w-12 h-12 mx-auto mb-4 text-yellow-300" />
               <h3 className="font-bold text-lg mb-2">Telefon</h3>
-              <p className="text-2xl font-bold">+60-172-137-979</p>
+              <p className="text-xl font-bold">+60-172-137-979</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
               <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-300" />
               <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
-              <p className="text-2xl font-bold">+60-172-137-979</p>
+              <p className="text-xl font-bold">+60-172-137-979</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
               <Mail className="w-12 h-12 mx-auto mb-4 text-blue-300" />
               <h3 className="font-bold text-lg mb-2">Email</h3>
-              <p className="text-lg font-bold">mashudiplumbing@gmail.com</p>
+              <p className="text-sm font-bold">mashudiplumbing@gmail.com</p>
             </div>
           </div>
 
