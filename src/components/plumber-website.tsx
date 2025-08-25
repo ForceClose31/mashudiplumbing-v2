@@ -16,11 +16,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function PlumbingWebsite() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/60172137979", "_blank");
+    window.open("https://wa.me/60183791132", "_blank");
   };
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+60172137979";
+    window.location.href = "tel:+60183791132";
   };
 
   const handleEmailClick = () => {
