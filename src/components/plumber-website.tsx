@@ -593,12 +593,12 @@ export default function PlumbingWebsite() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
               <Phone className="w-12 h-12 mx-auto mb-4 text-yellow-300" />
               <h3 className="font-bold text-lg mb-2">Telefon</h3>
-              <p className="text-xl font-bold">+60-172-137-979</p>
+              <p className="text-xl font-bold">+60-183-791-132</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
               <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-300" />
               <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
-              <p className="text-xl font-bold">+60-172-137-979</p>
+              <p className="text-xl font-bold">+60-183-791-132</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
               <Mail className="w-12 h-12 mx-auto mb-4 text-blue-300" />
@@ -731,7 +731,7 @@ export default function PlumbingWebsite() {
               <div className="space-y-2 text-gray-400">
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  <span>+60-172-137-979</span>
+                  <span>+60-183-791-132</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
