@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Mashudi Plumbing - Professional Plumbing Services Malaysia",
   description:
-    "Perkhidmatan tukang paip profesional di Kuala Lumpur, Selangor & Seremban. Pengalaman 8 tahun, harga berpatutan, servis 24/7. Hubungi +60-172-137-979",
+    "Perkhidmatan tukang paip profesional di Kuala Lumpur, Selangor & Seremban. Pengalaman 8 tahun, harga berpatutan, servis 24/7. Hubungi +60-183-791-132",
   keywords: [
     "tukang paip",
     "plumber",
