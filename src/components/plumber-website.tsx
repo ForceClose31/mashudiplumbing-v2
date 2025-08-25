@@ -93,7 +93,7 @@ export default function PlumbingWebsite() {
                 <div className="text-left">
                   <p className="text-sm text-gray-200">Hubungi Kami 24/7</p>
                   <p className="text-xl lg:text-2xl font-bold">
-                    +60-172-137-979
+                    +60-183-791-132
                   </p>
                 </div>
               </div>
