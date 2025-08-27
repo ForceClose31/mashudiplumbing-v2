@@ -3,8 +3,9 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { pageview } from "@/lib/gtag";
+import React from "react";
 
-export function Analytics() {
+function AnalyticsInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -15,4 +16,12 @@ export function Analytics() {
   }, [pathname, searchParams]);
 
   return null;
+}
+
+export function Analytics() {
+  return (
+    <React.Suspense fallback={null}>
+      <AnalyticsInner />
+    </React.Suspense>
+  );
 }
